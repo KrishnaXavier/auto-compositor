@@ -35,7 +35,7 @@ body {
 }
 
 .titulo{
-	font-size: 15px;
+	
 	
 	padding-bottom: 10px;
 	font-family: "Segoe UI",Arial,sans-serif;
@@ -78,7 +78,7 @@ body {
 
 .button-play{
 
-	font-size: 35px;	
+	font-size: 2em;
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	color: #3071a9;
 	font-style: italic;
