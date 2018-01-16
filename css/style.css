@@ -122,5 +122,9 @@ button{
 }
 
 .painel input{
-	width: 10%;
+	width: 10%;	
+}
+
+.painel{
+	text-align: center;
 }
