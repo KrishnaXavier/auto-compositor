@@ -94,6 +94,9 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
 }  
 
 function criarHTMLCanal(){
+    let saida = document.getElementById("saidas-canal")
+    let html =
+    "<div class='saida' id='saida'> <div>Intervalo de 200 a 1200 ms.</div> <div>Salto de 7 a -2  acorde(s).</div> <button onclick='stopCanal(); this.parentNode.remove();'>remover</button> </div>";
 
 }
 
@@ -111,6 +114,7 @@ function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
     let canal = criarCanal
     document.body.contadorCanal++
     criarCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
+    criarHTMLCanal();
 }
 
 function stopCanal(){
