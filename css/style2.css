@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+body {
+    background-color:#AFAFAF;    
+}
+
+.container-pai{
+	width: 100%;
+	margin: auto;
+
+}
+.container-align{
+	margin:auto;	
+	width: 0px;	
+}
+.container {
+	width:900px;
+	height:auto;	
+	border: 2px solid #888888;
+	box-shadow: 10px 10px 5px #888888;       		
+	float:left;
+	margin-left: -450px;	
+	margin-top: 10px;
+	background-color:#E4E4E4;
+	
+}
+
+.container, form{
+	padding: 25px;
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.reduction-factor-input, .speed-input, .number-of-colors-input{
+	width: 60px;
+}
+
+.titulo{
+	font-size: 15px;
+	
+	padding-bottom: 10px;
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.final{	
+	width: 900px;
+ 	height: auto;
+ 	float:left;
+	margin-left: -450px;
+
+ 	padding: 25px;
+ 	margin-top: 10px;
+
+ 	font-family: "Segoe UI",Arial,sans-serif;
+ 	border: 2px solid #888888;
+	box-shadow: 10px 10px 5px #888888;
+	background-color:#E4E4E4;       
+
+}
+
+.upload-image-button{
+	background-color:#45A6D4;    
+	font-family: "Segoe UI",Arial,sans-serif;
+	font-size: 20px;
+	height: 40px;
+
+
+}
+
+.input-file{
+	display: block !important;
+    width: 156px !important;
+    height: 40px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+.div-input-file{	
+	width: 156px;
+    height: 40px;
+    background-image: url("../imgs/UPLOAD-IMAGE.png");
+    overflow: hidden;
+}
+
+
+.final{	
+ 	padding: 15px;
+ 	margin-top: 10px;
+
+ 	font-size: 15px;	
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color: #3071a9;
+	font-style: italic;
+
+}
+
+.button-play{
+
+	font-size: 35px;	
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color: #3071a9;
+	font-style: italic;
+
+}
