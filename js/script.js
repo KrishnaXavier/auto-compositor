@@ -4,6 +4,7 @@ p_canal3=setInterval(300);
 
 window.onload=function(){    
     ACORDES = carregarAcordes();
+    p_canal = [];
     document.body.contadorCanal = 0;
 }            
 
@@ -73,7 +74,7 @@ function carregarAcordes(){
 }
 
 function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
-    console.log("criarCanal()")
+    console.log("Som canal "+n_canal)
     let rand = Math.floor((Math.random() * randmaior) +randmenor);
     let var_canal1 = nota + rand;
 
@@ -86,12 +87,11 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
     AUDIO = ACORDES[var_canal1]; 
     AUDIO.currentTime=0;                                
     AUDIO.play();
-
-    p_canal = [];
-    clearInterval(p_canal);    
+    
+    clearInterval(p_canal[n_canal]);    
     p_canal[n_canal] = setInterval(
         function(){ 
-            canal1(inicial, fim, var_canal1, randmaior, randmenor) 
+            criarCanal(inicial, fim, var_canal1, randmaior, randmenor, n_canal) 
         }, 
         Math.floor((Math.random() * fim) + inicial)
     );
