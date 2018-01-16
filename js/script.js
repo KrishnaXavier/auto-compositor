@@ -112,8 +112,7 @@ function canal2(inicial, fim, nota, randmaior, randmenor){
             canal2(fim, inicial, var_canal2, randmaior, randmenor)
         }, 
         Math.floor((Math.random() * fim) + inicial)
-    );                
-
+    );
 }
 
 function canal3(inicial, fim, nota, randmaior, randmenor){
@@ -134,7 +133,6 @@ function canal3(inicial, fim, nota, randmaior, randmenor){
         }, 
         Math.floor((Math.random() * fim) + inicial)
     );                
-
 }
 
 function playTeste(){
