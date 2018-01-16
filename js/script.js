@@ -170,6 +170,10 @@ function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
     canal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal++)
 }
 
+// function criarHTMLCanal(){
+    
+// }
+
 function pegarValores(){
     let minimo          = parseInt(document.getElementById("minimo").value)
     let maximo          = parseInt(document.getElementById("maximo").value)
