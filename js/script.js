@@ -107,7 +107,12 @@ function canal2(inicial, fim, nota, randmaior, randmenor){
     AUDIO.play();
 
     clearInterval(p_canal2);
-    p_canal2 = setInterval(function(){ canal2(fim, inicial, var_canal2, randmaior, randmenor) }, Math.floor((Math.random() * fim) + inicial));                
+    p_canal2 = setInterval(
+        function(){
+            canal2(fim, inicial, var_canal2, randmaior, randmenor)
+        }, 
+        Math.floor((Math.random() * fim) + inicial)
+    );                
 
 }
 
@@ -124,7 +129,11 @@ function canal3(inicial, fim, nota, randmaior, randmenor){
     AUDIO.play();
 
     clearInterval(p_canal3);
-    p_canal3 = setInterval(function(){ canal3(finm, inicial, var_canal3, randmaior, randmenor) }, Math.floor((Math.random() * fim) + inicial));                
+    p_canal3 = setInterval(
+        function(){ canal3(finm, inicial, var_canal3, randmaior, randmenor)
+        }, 
+        Math.floor((Math.random() * fim) + inicial)
+    );                
 
 }
 
