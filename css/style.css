@@ -119,6 +119,8 @@ button{
 .sub-slot{
 	margin-top: 20px;
 	margin-bottom: 20px;
+	width: 100%;
+	float: left;
 }
 
 .painel input{
@@ -129,8 +131,13 @@ button{
 	text-align: center;
 }
 
-.saidas-canal .saida{
+#saidas-canal .saida{
 	background-color: #aaa;
 	margin: 10px;
+	padding: 10px;
 	float: left;
+}
+
+#saidas-canal .saida button{
+	text-align: center;
 }
