@@ -72,7 +72,7 @@ function carregarAcordes(){
     ];
 }
 
-function canal1(inicial, fim, nota, randmaior, randmenor){
+function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
     var rand = Math.floor((Math.random() * randmaior) +randmenor);
     var var_canal1 = nota + rand;
 
@@ -87,7 +87,7 @@ function canal1(inicial, fim, nota, randmaior, randmenor){
     AUDIO.play();
 
     clearInterval(p_canal1);
-    p_canal1 = setInterval(
+    p_canal[n_canal] = setInterval(
         function(){ 
             canal1(inicial, fim, var_canal1, randmaior, randmenor) 
         }, 
@@ -165,8 +165,9 @@ function playTeste(){
 }     
 
 function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
-    let canal = canal1
-    canal(minimo, maximo, acordeInicial, maiorSalto, menorSalto)
+    //let canal = canal1
+    let canal = criarCanal
+    canal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal++)
 }
 
 function pegarValores(){
