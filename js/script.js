@@ -74,15 +74,15 @@ function carregarAcordes(){
 
 function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
     let rand = Math.floor((Math.random() * randmaior) +randmenor);
-    let var_canal = nota + rand;
+    let var_canal1 = nota + rand;
 
-    if(var_canal>59) var_canal=0;
-    if(var_canal<0) var_canal=59;
+    if(var_canal1>59) var_canal1=0;
+    if(var_canal1<0) var_canal1=59;
 
-    console.log("Canal "+n_canal+": "+var_canal);
-    console.log("Randon: "+rand);
+    console.log("Canal 1: "+var_canal1);
+    console.log("Rand: "+rand);
 
-    AUDIO = ACORDES[var_canal]; 
+    AUDIO = ACORDES[var_canal1]; 
     AUDIO.currentTime=0;                                
     AUDIO.play();
 
@@ -90,7 +90,7 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
     p_canal = [];
     p_canal[n_canal] = setInterval(
         function(){ 
-            criarCanal(inicial, fim, var_canal, randmaior, randmenor) 
+            canal1(inicial, fim, var_canal1, randmaior, randmenor) 
         }, 
         Math.floor((Math.random() * fim) + inicial)
     );
