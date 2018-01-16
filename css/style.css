@@ -82,6 +82,10 @@ body {
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	color: #3071a9;
 	font-style: italic;
+	
+	text-decoration: none;
+	display: inline-block;	
+	border: none;
 
 }
 
@@ -129,11 +133,16 @@ button{
 	padding: 5px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;	
+	display: inline-block;		
 	float: right;
 	margin: 10px;
 }
 
 #saidas-canal .saida h2{
 	font-size: 1.5em;
+}
+
+.super-titulo{
+	font-size: 3em;
+	text-align: center;
 }
