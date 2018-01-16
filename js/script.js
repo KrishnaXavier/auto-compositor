@@ -141,7 +141,8 @@ function playTeste(){
 }     
 
 function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
-    let audio = canal1
+    let canal = canal1
+    canal(minimo, maximo, acordeInicial, maiorSalto, menorSalto)
 }
 
 function pegarValores(){
