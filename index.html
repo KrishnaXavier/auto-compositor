@@ -18,72 +18,64 @@
 
                     <div>
                         <center> 
-                            <button onclick='playTeste()' class='button-play'>Play</button>
-                        </center>
-                    </div>
-
-                    <div>
-                        <center>
+                            <button onclick="pegarValores()" class="button-play">Play</button>
                             <button onclick='location.reload()' class='button-play'>Stop</button>
                         </center>
-                    </div>
-                    
-                    
-                    <div class="sub-slot">
-                        <div class="sub-titulo">Exemplo execute no console do navegador:</div>
-                        <div class="exemplo">canal3(200, 200,  10, 3, -1)</div>
-                        <div class="exemplo">canal2(200, 1200, 10, 7, -2)</div>
-                        <div class="exemplo">canal1(800, 1200, 10, 5, -2)</div>
 
-                        <div>
-                            canalx(
-                            intervalo minimo, 
-                            intervalo maximo, 
-                            ACORDE inicial (0~59), 
-                            maior salto de acorde, 
-                            menor salto de acorde
-                            )
-                        </div>
-                    </div>
-                    
-                    <div class="sub-slot">
-                        <div class="sub-titulo">Para  para um canal:</div>
-                        <div class="exemplo">clearInterval(p_canal)</div>
-                    </div>
+                         <div class="sub-slot painel">
+                            <div class="slot-input">
+                                Intervalo minimo:<input type="number" id="minimo" value="200" />    
+                            </div>
 
-                    <div class="sub-slot painel">
-                        <div class="slot-input">
-                            Intervalo minimo:<input type="number" id="minimo" value="200" />    
-                        </div>
+                            <div class="slot-input">
+                                Intervalo máximo:<input type="number" name="" id="maximo" value="1200" />    
+                            </div>
 
-                        <div class="slot-input">
-                            Intervalo máximo:<input type="number" name="" id="maximo" value="1200" />    
-                        </div>
+                            <div class="slot-input">
+                                Acorde inicial (0~59): <input type="number" name="" min="0" max="59" id="acorde-inical" value="10" />    
+                            </div>
 
-                        <div class="slot-input">
-                            Acorde inicial (0~59): <input type="number" name="" min="0" max="59" id="acorde-inical" value="10" />    
-                        </div>
+                            <div class="slot-input">
+                                Maior salto de acorde:<input type="number" name="" id="maior-salto" value="7" />    
+                            </div>
 
-                        <div class="slot-input">
-                            Maior salto de acorde:<input type="number" name="" id="maior-salto" value="7" />    
-                        </div>
-
-                        <div class="slot-input">
-                            Menor salto de acorde:<input type="number" id="menor-salvo" value="-2" />    
-                        </div>   
-
-                        <button onclick="pegarValores()">Play</button>                     
-                    </div>
-
+                            <div class="slot-input">
+                                Menor salto de acorde:<input type="number" id="menor-salvo" value="-2" />    
+                            </div>                               
+                        </div>                    
                 </div>
-            </div>            
 
-            <div class="final"> 
-                Version 0.0.2, Copyright © 2016 - All rights reserved <br>                
-                Developer: Krishna Xavier
+                <div class="sub-slot">
+                    <div class="sub-titulo">Exemplo execute no console do navegador:</div>
+                    <div class="exemplo">canal3(200, 200,  10, 3, -1)</div>
+                    <div class="exemplo">canal2(200, 1200, 10, 7, -2)</div>
+                    <div class="exemplo">canal1(800, 1200, 10, 5, -2)</div>
+
+                    <div>
+                        canalx(
+                        intervalo minimo, 
+                        intervalo maximo, 
+                        ACORDE inicial (0~59), 
+                        maior salto de acorde, 
+                        menor salto de acorde
+                        )
+                    </div>
+                </div>
+
+                <div class="sub-slot">
+                    <div class="sub-titulo">Para  para um canal:</div>
+                    <div class="exemplo">clearInterval(p_canal)</div>
+                </div>                    
+
             </div>
-        </div>         
-    </div>
+        </div>            
+
+        <div class="final"> 
+            Version 0.0.2, Copyright © 2016 - All rights reserved <br>                
+            Developer: Krishna Xavier
+        </div>
+    </div>         
+</div>
 
 </body>
 </html>
