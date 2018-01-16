@@ -22,7 +22,7 @@
                             <button onclick='location.reload()' class='button-play'>Stop</button>
                         </center>
 
-                         <div class="sub-slot painel">
+                        <div class="sub-slot painel">
                             <div class="slot-input">
                                 Intervalo minimo(ms):<input type="number" id="minimo" value="200" />    
                             </div>
@@ -43,49 +43,53 @@
                                 Menor salto de acorde:<input type="number" id="menor-salvo" value="-2" />    
                             </div>                               
                         </div>                    
-                </div>
-
-                <div class="sub-slot">
-                    <div id="saidas-canal">
-                        Intervalo de 200 a 1200 ms
-                        Salto de 7 a -2  acorde(s) <button onclick="">remover</button>
-
                     </div>
-                </div>
 
-                <div class="sub-slot">
-                    <div class="sub-titulo">Exemplo execute no console do navegador:</div>
-                    <div class="exemplo">canal1(800, 1200, 10, 5, -2)</div>
-                    <div class="exemplo">canal2(200, 1200, 10, 7, -2)</div>
-                    <div class="exemplo">canal3(200, 200,  10, 3, -1)</div>                                    
+                    <div class="sub-slot">
+                        <div id="saidas-canal">
 
-                    <div>
-                        canalx(
-                        intervalo minimo, 
-                        intervalo maximo, 
-                        ACORDE inicial (0~59), 
-                        maior salto de acorde, 
-                        menor salto de acorde
-                        )
+                            <div class="saida">
+                                <div>Intervalo de 200 a 1200 ms.</div>
+                                <div>Salto de 7 a -2  acorde(s).</div>
+                                <button onclick="">remover</button>
+                            </div>
+
+                        </div>
                     </div>
+
+                    <div class="sub-slot">
+                        <div class="sub-titulo">Exemplo execute no console do navegador:</div>
+                        <div class="exemplo">canal1(800, 1200, 10, 5, -2)</div>
+                        <div class="exemplo">canal2(200, 1200, 10, 7, -2)</div>
+                        <div class="exemplo">canal3(200, 200,  10, 3, -1)</div>                                    
+
+                        <div>
+                            canalx(
+                            intervalo minimo, 
+                            intervalo maximo, 
+                            ACORDE inicial (0~59), 
+                            maior salto de acorde, 
+                            menor salto de acorde
+                            )
+                        </div>
+                    </div>
+
+                    <div class="sub-slot">
+                        <div class="sub-titulo">Para parar um canal:</div>
+                        <div class="exemplo">clearInterval(p_canal1)</div>
+                        <div class="exemplo">clearInterval(p_canal2)</div>
+                        <div class="exemplo">clearInterval(p_canal3)</div>
+                    </div>                    
+
                 </div>
+            </div>            
 
-                <div class="sub-slot">
-                    <div class="sub-titulo">Para parar um canal:</div>
-                    <div class="exemplo">clearInterval(p_canal1)</div>
-                    <div class="exemplo">clearInterval(p_canal2)</div>
-                    <div class="exemplo">clearInterval(p_canal3)</div>
-                </div>                    
-
+            <div class="final"> 
+                Version 0.2, Copyright © 2016 - All rights reserved <br>                
+                Developer: Krishna Xavier
             </div>
-        </div>            
-
-        <div class="final"> 
-            Version 0.2, Copyright © 2016 - All rights reserved <br>                
-            Developer: Krishna Xavier
-        </div>
-    </div>         
-</div>
+        </div>         
+    </div>
 
 </body>
 </html>

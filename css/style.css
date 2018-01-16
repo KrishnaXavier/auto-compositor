@@ -128,3 +128,9 @@ button{
 .painel{
 	text-align: center;
 }
+
+.saidas-canal .saida{
+	background-color: #aaa;
+	margin: 10px;
+	float: left;
+}
