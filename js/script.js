@@ -95,9 +95,9 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
 
 function criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, contadorCanal){
     let saida = document.getElementById("saidas-canal")
-    let html =
-    "<div class='saida' id='saida'> <div>Intervalo de "+  minimo +" a "+ maximo +" ms.</div> <div>Salto de "+ maiorSalto +" a "+ menorSalto +"  acorde(s).</div> <button onclick='stopCanal("+ contadorCanal +"); this.parentNode.remove();'>remover canal</button> </div>"
-    ;
+
+    /* melhor usar createrElement */
+    let html ="<div class='saida' id='saida'> <div>Intervalo de "+  minimo +" a "+ maximo +" ms.</div> <div>Salto de "+ maiorSalto +" a "+ menorSalto +"  acorde(s).</div> <button onclick='stopCanal("+ contadorCanal +"); this.parentNode.remove();'>remover canal "+ contadorCanal +"</button> </div>";
     saida.innerHTML += html;
 }
 
