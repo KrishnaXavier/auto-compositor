@@ -140,6 +140,10 @@ function playTeste(){
     canal1(800, 1200, 10, 5, -2); 
 }     
 
-function play(){
-    
+function pegarValores(){
+    let minimo          = parseInt(document.getElementById("minimo").value)
+    let maximo          = parseInt(document.getElementById("maximo").value)
+    let acordeInicial   = parseInt(document.getElementById("acorde-inical").value)
+    let maiorSalto      = parseInt(document.getElementById("maior-salto").value)    
+    let menorSalto      = parseInt(document.getElementById("menor-salvo").value)
 }
