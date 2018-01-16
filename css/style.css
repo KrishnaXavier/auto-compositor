@@ -111,3 +111,7 @@ button{
 	padding: 10px;
 	background-color: #aaa;
 }
+
+.titulo{
+	font-size: 1.25em;
+}
