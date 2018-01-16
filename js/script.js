@@ -3,7 +3,11 @@ p_canal2=setInterval(300);
 p_canal3=setInterval(300);    
 
 window.onload=function(){    
-    ACORDES = [
+    ACORDES = carregarAcordes();
+}            
+
+function carregarAcordes(){
+    return [
         new Audio ('sounds/C-1.mp3'),
         new Audio ('sounds/D-3.mp3'),
         new Audio ('sounds/C+-2.mp3'),
@@ -65,7 +69,7 @@ window.onload=function(){
         new Audio ('sounds/A+-59.mp3'),
         new Audio ('sounds/C-61.mp3')
     ];
-}            
+}
 
 function canal1(inicial, fim, nota, randmaior, randmenor){
     var rand = Math.floor((Math.random() * randmaior) +randmenor);
