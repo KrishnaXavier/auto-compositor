@@ -112,6 +112,11 @@ button{
 	background-color: #aaa;
 }
 
-.titulo{
+.sub-titulo{
 	font-size: 1.25em;
+}
+
+.sub-slot{
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
