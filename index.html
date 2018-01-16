@@ -53,24 +53,26 @@
 
                     <div class="sub-slot painel">
                         <div class="slot-input">
-                            Intervalo minimo:<input type="number" name="" />    
+                            Intervalo minimo:<input type="number" id="minimo" value="200" />    
                         </div>
 
                         <div class="slot-input">
-                            Intervalo máximo:<input type="number" name="" />    
+                            Intervalo máximo:<input type="number" name="" id="maximo" value="1200" />    
                         </div>
 
                         <div class="slot-input">
-                            Acorde inicial (0~59): <input type="number" name="" min="0" max="59" />    
+                            Acorde inicial (0~59): <input type="number" name="" min="0" max="59" id="acorde-inical" value="10" />    
                         </div>
 
                         <div class="slot-input">
-                            Maior salto de acorde:<input type="number" name="" />    
+                            Maior salto de acorde:<input type="number" name="" id="maior-salto" value="7" />    
                         </div>
 
                         <div class="slot-input">
-                            Menor salto de acorde:<input type="number" id="menor-salvo" />    
-                        </div>                        
+                            Menor salto de acorde:<input type="number" id="menor-salvo" value="-2" />    
+                        </div>   
+
+                        <button onclick="play()">Play</button>                     
                     </div>
 
                 </div>
