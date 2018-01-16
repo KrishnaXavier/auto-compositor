@@ -4,6 +4,7 @@ p_canal3=setInterval(300);
 
 window.onload=function(){    
     ACORDES = carregarAcordes();
+    document.body.contadorCanal = 0;
 }            
 
 function carregarAcordes(){
@@ -69,6 +70,29 @@ function carregarAcordes(){
         new Audio ('sounds/A+-59.mp3'),
         new Audio ('sounds/C-61.mp3')
     ];
+}
+
+function canal1(inicial, fim, nota, randmaior, randmenor){
+    var rand = Math.floor((Math.random() * randmaior) +randmenor);
+    var var_canal1 = nota + rand;
+
+    if(var_canal1>59) var_canal1=0;
+    if(var_canal1<0) var_canal1=59;
+
+    console.log("Canal 1: "+var_canal1);
+    console.log("Rand: "+rand);
+
+    AUDIO = ACORDES[var_canal1]; 
+    AUDIO.currentTime=0;                                
+    AUDIO.play();
+
+    clearInterval(p_canal1);
+    p_canal1 = setInterval(
+        function(){ 
+            canal1(inicial, fim, var_canal1, randmaior, randmenor) 
+        }, 
+        Math.floor((Math.random() * fim) + inicial)
+    );
 }
 
 function canal1(inicial, fim, nota, randmaior, randmenor){
