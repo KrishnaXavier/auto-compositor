@@ -82,11 +82,18 @@ body {
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	color: #3071a9;
 	font-style: italic;
-	
+
 	text-decoration: none;
 	display: inline-block;	
 	border: none;
 
+	background-color: #3071a9;
+
+	color: #fff;
+}
+
+.button-stop{
+	background-color: #f55;
 }
 
 button{
@@ -145,4 +152,5 @@ button{
 .super-titulo{
 	font-size: 3em;
 	text-align: center;
+	color: #3071a9
 }
