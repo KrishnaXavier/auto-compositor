@@ -139,3 +139,7 @@ function playTeste(){
     canal2(200, 1200, 10, 7, -2); 
     canal1(800, 1200, 10, 5, -2); 
 }     
+
+function play(){
+    
+}
