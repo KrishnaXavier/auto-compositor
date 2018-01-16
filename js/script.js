@@ -168,7 +168,7 @@ function playTeste(){
 function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
     //let canal = canal1
     let canal = criarCanal
-    canal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal++)
+    criarCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal++)
 }
 
 // function criarHTMLCanal(){
