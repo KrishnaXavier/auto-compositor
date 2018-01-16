@@ -81,8 +81,8 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
     if(var_canal1>59) var_canal1=0;
     if(var_canal1<0) var_canal1=59;
 
-    console.log("Canal 1: "+var_canal1);
-    console.log("Rand: "+rand);
+    console.log("Acorde: "+var_canal1);
+    console.log("Random: "+rand);
 
     AUDIO = ACORDES[var_canal1]; 
     AUDIO.currentTime=0;                                
@@ -95,79 +95,9 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
         }, 
         Math.floor((Math.random() * fim) + inicial)
     );
-}
+}  
 
-function canal1(inicial, fim, nota, randmaior, randmenor){
-    var rand = Math.floor((Math.random() * randmaior) +randmenor);
-    var var_canal1 = nota + rand;
-
-    if(var_canal1>59) var_canal1=0;
-    if(var_canal1<0) var_canal1=59;
-
-    console.log("Canal 1: "+var_canal1);
-    console.log("Rand: "+rand);
-
-    AUDIO = ACORDES[var_canal1]; 
-    AUDIO.currentTime=0;                                
-    AUDIO.play();
-
-    clearInterval(p_canal1);
-    p_canal1 = setInterval(
-        function(){ 
-            canal1(inicial, fim, var_canal1, randmaior, randmenor) 
-        }, 
-        Math.floor((Math.random() * fim) + inicial)
-    );
-}
-
-function canal2(inicial, fim, nota, randmaior, randmenor){
-    var var_canal2 = nota + Math.floor((Math.random() * randmaior) +randmenor);
-
-    if(var_canal2>59) var_canal2=0;
-    if(var_canal2<0) var_canal2=59;
-
-    console.log("Canal 2: "+var_canal2);
-
-    AUDIO = ACORDES[var_canal2]; 
-    AUDIO.currentTime=0;                                
-    AUDIO.play();
-
-    clearInterval(p_canal2);
-    p_canal2 = setInterval(
-        function(){
-            canal2(fim, inicial, var_canal2, randmaior, randmenor)
-        }, 
-        Math.floor((Math.random() * fim) + inicial)
-    );
-}
-
-function canal3(inicial, fim, nota, randmaior, randmenor){
-    var var_canal3 = nota + Math.floor((Math.random() * randmaior) +randmenor);
-
-    if(var_canal3>59) var_canal3=0;
-    if(var_canal3<0) var_canal3=59;
-
-    console.log("Canal 3: "+var_canal3);
-
-    AUDIO = ACORDES[var_canal3]; 
-    AUDIO.currentTime=0;                                
-    AUDIO.play();
-
-    clearInterval(p_canal3);
-    p_canal3 = setInterval(
-        function(){ canal3(finm, inicial, var_canal3, randmaior, randmenor)
-        }, 
-        Math.floor((Math.random() * fim) + inicial)
-    );                
-}
-
-function playTeste(){
-    canal2(200, 1200, 10, 7, -2); 
-    canal1(800, 1200, 10, 5, -2); 
-}     
-
-function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
-    //let canal = canal1
+function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){    
     let canal = criarCanal
     criarCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal++)
 }
