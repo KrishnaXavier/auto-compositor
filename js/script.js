@@ -1,7 +1,3 @@
-p_canal1=setInterval(300);
-p_canal2=setInterval(300);
-p_canal3=setInterval(300);    
-
 window.onload=function(){    
     ACORDES = carregarAcordes();
     p_canal = [];
@@ -97,14 +93,9 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
     );
 }  
 
-function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){    
-    let canal = criarCanal
-    criarCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal++)
+function criarHTMLCanal(){
+
 }
-
-// function criarHTMLCanal(){
-
-// }
 
 function pegarValores(){
     let minimo          = parseInt(document.getElementById("minimo").value)
@@ -115,3 +106,14 @@ function pegarValores(){
 
     play(minimo, maximo, acordeInicial, maiorSalto, menorSalto)
 }
+
+function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){    
+    let canal = criarCanal
+    document.body.contadorCanal++
+    criarCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
+}
+
+function stopCanal(){
+
+}
+
