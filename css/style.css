@@ -100,3 +100,11 @@ body {
 	font-style: italic;
 
 }
+
+button{
+	margin: 10px;
+}
+
+.exemplo{
+	margin-bottom: 10px;
+}
