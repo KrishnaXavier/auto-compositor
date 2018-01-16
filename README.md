@@ -1,2 +1,2 @@
-# auto-compositor
-Compositor automatico de música.
+# Auto Compositor
+Compositor automático de música.
