@@ -73,6 +73,7 @@ function carregarAcordes(){
 }
 
 function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
+    console.log("criarCanal()")
     let rand = Math.floor((Math.random() * randmaior) +randmenor);
     let var_canal1 = nota + rand;
 
