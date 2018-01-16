@@ -98,6 +98,8 @@ function criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, c
     let html =
     "<div class='saida' id='saida'> <div>Intervalo de "+  minimo +" a "+ maximo +" ms.</div> <div>Salto de "+ maiorSalto +" a "+ menorSalto +"  acorde(s).</div> <button onclick='stopCanal("+ contadorCanal +"); this.parentNode.remove();'>remover canal</button> </div>";
 
+    console.log(html);
+
 }
 
 function pegarValores(){
