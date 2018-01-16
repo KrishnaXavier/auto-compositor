@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+body {
+	background-color:#AFAFAF;    
+}
+
+.container-pai{
+	width: 100%;
+	margin: auto;
+
+}
+.container-align{
+	margin:auto;	
+	width: 0px;	
+}
+.container {
+	width:900px;
+	height:auto;	
+	border: 2px solid #888888;
+	box-shadow: 10px 10px 5px #888888;       		
+	float:left;
+	margin-left: -450px;	
+	margin-top: 10px;
+	background-color:#E4E4E4;
+	
+}
+
+.container, form{
+	padding: 25px;
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.reduction-factor-input, .speed-input, .number-of-colors-input{
+	width: 60px;
+}
+
+.titulo{
+	
+	
+	padding-bottom: 10px;
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.upload-image-button{
+	background-color:#45A6D4;    
+	font-family: "Segoe UI",Arial,sans-serif;
+	font-size: 20px;
+	height: 40px;
+
+
+}
+
+.input-file{
+	display: block !important;
+	width: 156px !important;
+	height: 40px !important;
+	opacity: 0 !important;
+	overflow: hidden !important;
+}
+.div-input-file{	
+	width: 156px;
+	height: 40px;
+	background-image: url("../imgs/UPLOAD-IMAGE.png");
+	overflow: hidden;
+}
+
+
+.final{	
+	padding: 15px;
+	margin-top: 10px;
+
+	font-size: 15px;	
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color: #3071a9;
+	font-style: italic;
+
+}
+
+.button-play{
+
+	font-size: 2em;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color: #3071a9;
+	font-style: italic;
+
+	text-decoration: none;
+	display: inline-block;	
+	border: none;
+
+	background-color: #3071a9;
+
+	color: #fff;
+}
+
+.button-stop{
+	background-color: #f55;
+}
+
+button{
+	margin: 10px;
+}
+
+.exemplo{
+	margin-bottom: 5px;
+	margin-top: 5px;	
+	padding: 10px;
+	background-color: #aaa;
+}
+
+.sub-titulo{
+	font-size: 1.25em;
+}
+
+.sub-slot{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	float: left;
+}
+
+.painel input{
+	width: 10%;	
+}
+
+.painel{
+	text-align: center;
+}
+
+#saidas-canal .saida{
+	background-color: #aaa;
+	margin: 10px;
+	padding: 20px;
+	float: left;
+}
+
+#saidas-canal .saida button{
+	background-color: #af4c4c;
+	border: none;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;		
+	float: right;
+	margin: 10px;
+}
+
+#saidas-canal .saida h2{
+	font-size: 1.5em;
+}
+
+.super-titulo{
+	font-size: 3em;
+	text-align: center;
+	color: #3071a9
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />            
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imgs/icon.jpg" type="image/x-icon"/> 
+    <title>Auto Compositor</title>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+
+<body>      
+    <div class="container-pai">
+        <div class="container-align">            
+            <div class="container">
+                <div class="titulo"> 
+                    <h1 class="super-titulo">Auto Compositor - Piano</h1>
+
+                    <div>                        
+
+                        <div class="sub-slot painel">
+                            <div class="slot-input">
+                                Intervalo minimo(ms):<input type="number" id="minimo" value="200" />    
+                            </div>
+
+                            <div class="slot-input">
+                                Intervalo máximo(ms):<input type="number" name="" id="maximo" value="1200" />    
+                            </div>
+
+                            <div class="slot-input">
+                                Acorde inicial (0~59): <input type="number" name="" min="0" max="59" id="acorde-inical" value="10" />    
+                            </div>
+
+                            <div class="slot-input">
+                                Maior salto de acorde:<input type="number" name="" id="maior-salto" value="7" />    
+                            </div>
+
+                            <div class="slot-input">
+                                Menor salto de acorde:<input type="number" id="menor-salvo" value="-2" />    
+                            </div>                               
+                        </div>                    
+
+                        <center> 
+                            <button onclick="pegarValores()" class="button-play">Play</button>
+                            <button onclick='location.reload()' class='button-play button-stop'>Stop</button>
+                        </center>
+                    </div>
+
+                    <div class="sub-slot">
+                        <div id="saidas-canal">                            
+                        </div>
+                    </div>                    
+                </div>                        
+            </div>         
+        </div>
+
+    </body>
+    </html>
