@@ -86,8 +86,8 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
     AUDIO.currentTime=0;                                
     AUDIO.play();
 
-    clearInterval(p_canal1);
     p_canal = [];
+    clearInterval(p_canal);    
     p_canal[n_canal] = setInterval(
         function(){ 
             canal1(inicial, fim, var_canal1, randmaior, randmenor) 
