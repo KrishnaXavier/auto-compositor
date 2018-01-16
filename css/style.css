@@ -120,3 +120,7 @@ button{
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+.painel input{
+	width: 10%;
+}
