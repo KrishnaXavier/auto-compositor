@@ -96,10 +96,8 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
 function criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, contadorCanal){
     let saida = document.getElementById("saidas-canal")
     let html =
-    "<div class='saida' id='saida'> <div>Intervalo de "+  minimo +" a "+ maximo +" ms.</div> <div>Salto de "+ maiorSalto +" a "+ menorSalto +"  acorde(s).</div> <button onclick='stopCanal("+ contadorCanal +"); this.parentNode.remove();'>remover canal</button> </div>";
-
-    console.log(html);
-
+    "<div class='saida' id='saida'> <div>Intervalo de "+  minimo +" a "+ maximo +" ms.</div> <div>Salto de "+ maiorSalto +" a "+ menorSalto +"  acorde(s).</div> <button onclick='stopCanal("+ contadorCanal +"); this.parentNode.remove();'>remover canal</button> </div>";    
+    saida.appendChild(html);    
 }
 
 function pegarValores(){
@@ -119,7 +117,7 @@ function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
     criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal);
 }
 
-function stopCanal(){
-
+function stopCanal(n_canal){
+    clearInterval(p_canal[n_canal]);
 }
 
