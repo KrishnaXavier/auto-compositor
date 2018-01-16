@@ -15,11 +15,24 @@
         <div class="container-align">            
             <div class="container">
                 <div class="titulo"> 
-                    <center> <button onclick='playTeste()' class='button-play'>Play</button></center><br>
-                    <center> <button onclick='location.reload()' class='button-play'>Stop</button></center>
-                    <br><br><br>
-                    Exemplo console(F12): <br>
-                    <br> canalx(intervalo minimo, intervalo maximo, ACORDE inicial (0~59), maior salto de acorde, menor salto de acorde)
+
+                    <div>
+                        <center> 
+                            <button onclick='playTeste()' class='button-play'>Play</button>
+                        </center>
+                    </div>
+
+                    <div>
+                        <center>
+                            <button onclick='location.reload()' class='button-play'>Stop</button>
+                        </center>
+                    </div>
+
+                    <div class="espaco"></div>
+
+                    <h4>Exemplo execute no console do navegador:</h4>
+                    
+                    canalx(intervalo minimo, intervalo maximo, ACORDE inicial (0~59), maior salto de acorde, menor salto de acorde)
                     <br>canal3(200, 200, 10, 3, -1);
                     <br>canal2(200, 1200, 10, 7, -2);
                     <br>canal1(800, 1200, 10, 5, -2); 
