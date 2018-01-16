@@ -41,22 +41,6 @@ body {
 	font-family: "Segoe UI",Arial,sans-serif;
 }
 
-.final{	
-	width: 900px;
- 	height: auto;
- 	float:left;
-	margin-left: -450px;
-
- 	padding: 25px;
- 	margin-top: 10px;
-
- 	font-family: "Segoe UI",Arial,sans-serif;
- 	border: 2px solid #888888;
-	box-shadow: 10px 10px 5px #888888;
-	background-color:#E4E4E4;       
-
-}
-
 .upload-image-button{
 	background-color:#45A6D4;    
 	font-family: "Segoe UI",Arial,sans-serif;
