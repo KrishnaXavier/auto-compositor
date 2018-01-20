@@ -112,7 +112,7 @@ function criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, c
     let btn     = document.createElement("button")
     btn.appendChild(document.createTextNode("Remover canal."))    
     btn.addEventListener("click", function (){ stopCanal(contadorCanal) })
-    btn.addEventListener("click", function (){this.parentNode.remove()})
+    btn.addEventListener("click", function (){ this.parentNode.remove() })
 
     div1.appendChild(h2)
     div1.appendChild(img)
