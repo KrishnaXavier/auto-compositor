@@ -155,4 +155,3 @@ function regarregarPagina(){
 function stopCanal(n_canal){
     clearInterval(p_canal[n_canal])
 }
-
