@@ -1,8 +1,4 @@
-window.onload=function(){    
-    ACORDES = carregarAcordes();
-    p_canal = [];
-    document.body.contadorCanal = 0;
-}            
+window.addEventListener('DOMContentLoaded', init);           
 
 function carregarAcordes(){
     return [
@@ -101,6 +97,15 @@ function criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, c
     saida.innerHTML += html;
 }
 
+function init(){
+    ACORDES = carregarAcordes()
+    p_canal = []
+    document.body.contadorCanal = 0
+
+    document.getElementById("button-play").addEventListener("click", pegarValores)
+    document.getElementById("button-stop").addEventListener("click", regarregarPagina)
+}
+
 function pegarValores(){
     let minimo          = parseInt(document.getElementById("minimo").value)
     let maximo          = parseInt(document.getElementById("maximo").value)
@@ -115,10 +120,14 @@ function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
     let canal = criarCanal
     document.body.contadorCanal++
     criarCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
-    criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal);
+    criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
+}
+
+function regarregarPagina(){
+    location.reload()
 }
 
 function stopCanal(n_canal){
-    clearInterval(p_canal[n_canal]);
+    clearInterval(p_canal[n_canal])
 }
 
