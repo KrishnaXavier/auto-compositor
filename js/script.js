@@ -128,7 +128,7 @@ function init(){
     document.body.contadorCanal = 0
 
     document.getElementById("button-play").addEventListener("click", pegarValores)
-    document.getElementById("button-stop").addEventListener("click", regarregarPagina)
+    document.getElementById("button-stop").addEventListener("click", function (){ location.reload() })
 }
 
 function pegarValores(){
@@ -141,15 +141,11 @@ function pegarValores(){
     play(minimo, maximo, acordeInicial, maiorSalto, menorSalto)
 }
 
-function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){    
+function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
     let canal = criarCanal
     document.body.contadorCanal++
     criarCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
     criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
-}
-
-function regarregarPagina(){
-    location.reload()
 }
 
 function stopCanal(n_canal){
