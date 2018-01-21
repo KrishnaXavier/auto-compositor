@@ -1,8 +1,4 @@
-window.onload=function(){    
-    ACORDES = carregarAcordes();
-    p_canal = [];
-    document.body.contadorCanal = 0;
-}            
+window.addEventListener('DOMContentLoaded', init);           
 
 function carregarAcordes(){
     return [
@@ -91,14 +87,48 @@ function criarCanal(inicial, fim, nota, randmaior, randmenor, n_canal){
         }, 
         Math.floor((Math.random() * fim) + inicial)
     );
-}  
+}
 
 function criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, contadorCanal){
     let saida = document.getElementById("saidas-canal")
 
-    /* melhor usar createrElement */
-    let html ="<div class='saida' id='saida'> <h2>Canal "+ contadorCanal +"</h2> <img src='imgs/fake.gif'  width='200px'/> <div>Intervalo de "+  minimo +" a "+ maximo +" ms.</div> <div>Salto de "+ maiorSalto +" a "+ menorSalto +"  acorde(s).</div> <button onclick='stopCanal("+ contadorCanal +"); this.parentNode.remove();'>remover canal</button> </div>";
-    saida.innerHTML += html;
+    let div1    = document.createElement("div")
+    div1.setAttribute("class", "saida")
+    div1.setAttribute("id", "saida")
+    
+    let h2      = document.createElement("h2")
+    h2.appendChild(document.createTextNode("Canal "+contadorCanal))    
+
+    let img     = document.createElement("img")    
+    img.setAttribute("src", "imgs/fake.gif")
+    img.setAttribute("width", "200px")    
+
+    let div2    = document.createElement("div")    
+    div2.appendChild(document.createTextNode("Intervalo de "+minimo+" a "+maximo+" ms."))
+
+    let div3    = document.createElement("div")    
+    div3.appendChild(document.createTextNode("Salto de "+menorSalto+" a "+maiorSalto+" acorde(s)."))
+
+    let btn     = document.createElement("button")
+    btn.appendChild(document.createTextNode("Remover canal."))    
+    btn.addEventListener("click", function (){ stopCanal(contadorCanal) })
+    btn.addEventListener("click", function (){ this.parentNode.remove() })
+
+    div1.appendChild(h2)
+    div1.appendChild(img)
+    div1.appendChild(div2)
+    div1.appendChild(div3)
+    div1.appendChild(btn)
+    saida.appendChild(div1)
+}
+
+function init(){
+    ACORDES = carregarAcordes()
+    p_canal = []
+    document.body.contadorCanal = 0
+
+    document.getElementById("button-play").addEventListener("click", pegarValores)
+    document.getElementById("button-stop").addEventListener("click", function (){ location.reload() })
 }
 
 function pegarValores(){
@@ -111,14 +141,13 @@ function pegarValores(){
     play(minimo, maximo, acordeInicial, maiorSalto, menorSalto)
 }
 
-function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){    
+function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
     let canal = criarCanal
     document.body.contadorCanal++
     criarCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
-    criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal);
+    criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
 }
 
 function stopCanal(n_canal){
-    clearInterval(p_canal[n_canal]);
+    clearInterval(p_canal[n_canal])
 }
-
