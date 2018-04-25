@@ -7,6 +7,22 @@
     <link rel="icon" href="imgs/icon.jpg" type="image/x-icon"/> 
     <title>Auto Compositor</title>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/process_url.js"></script>
+
+
+    <meta property="og:url" content="https://krishnaxavier.github.io/auto-compositor/">
+    <meta property="og:title" content="Auto Compositor">
+    <meta property="og:site_name" content="Auto Compositor">
+    <meta property="og:description" content="Compositor automático de música.">
+    <meta property="og:type" content="website"> 
+    <meta property="og:image" content="https://raw.githubusercontent.com/KrishnaXavier/auto-compositor/master/imgs/demo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1058"> 
+    <meta property="og:image:height" content="668"> 
+
+    <meta name="description" content="Compositor automático de música."/>
+    <meta name="author" content="Krishna Ferreira Xavier">
+    <meta name="keywords" content="compositor, piano, música"> 
 
 </head>
 
@@ -44,8 +60,14 @@
 
                         <center> 
                             <button class="button-play" id="button-play">Play</button>
-                            <button class="button-play button-stop" id="button-stop">Stop</button>
-                        </center>
+                            <button class="button-play button-stop" id="button-stop">Recarregar</button>
+                            
+                            <div class="slot-url-compartilhar">
+                                <input type="text" id="saida-url-compartilhar" />
+                                <div>(link para compartilhar)</div>
+                            </div>
+                            
+                        </center>                        
 
                     </div>
 
