@@ -7,6 +7,7 @@
     <link rel="icon" href="imgs/icon.jpg" type="image/x-icon"/> 
     <title>Auto Compositor</title>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/process_url.js"></script>
 
 </head>
 
@@ -15,7 +16,7 @@
         <div class="container-align">            
             <div class="container">
                 <div class="titulo"> 
-                   
+
                     <h1 class="super-titulo">Auto Compositor - Piano</h1>
 
                     <div>                        
@@ -44,8 +45,14 @@
 
                         <center> 
                             <button class="button-play" id="button-play">Play</button>
-                            <button class="button-play button-stop" id="button-stop">Stop</button>
-                        </center>
+                            <button class="button-play button-stop" id="button-stop">Recarregar</button>
+                            
+                            <div class="slot-url-compartilhar">
+                                <input type="text" id="saida-url-compartilhar" />
+                                <div>(link para compartilhar)</div>
+                            </div>
+                            
+                        </center>                        
 
                     </div>
 

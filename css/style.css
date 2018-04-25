@@ -154,3 +154,7 @@ button{
 	text-align: center;
 	color: #3071a9
 }
+
+.slot-url-compartilhar input{
+ 	width: 50%;
+}

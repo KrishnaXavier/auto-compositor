@@ -1,4 +1,7 @@
-window.addEventListener('DOMContentLoaded', init);           
+window.addEventListener('DOMContentLoaded', init);
+
+canais = [];
+canais_status = ""
 
 function carregarAcordes(){
     return [
@@ -113,6 +116,7 @@ function criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, c
     btn.appendChild(document.createTextNode("Remover canal."))    
     btn.addEventListener("click", function (){ stopCanal(contadorCanal) })
     btn.addEventListener("click", function (){ this.parentNode.remove() })
+    btn.addEventListener("click", function (){ URLCanaisSaida() })
 
     div1.appendChild(h2)
     div1.appendChild(img)
@@ -129,6 +133,8 @@ function init(){
 
     document.getElementById("button-play").addEventListener("click", pegarValores)
     document.getElementById("button-stop").addEventListener("click", function (){ location.reload() })
+
+    initCheckURLCanais()
 }
 
 function pegarValores(){
@@ -136,7 +142,7 @@ function pegarValores(){
     let maximo          = parseInt(document.getElementById("maximo").value)
     let acordeInicial   = parseInt(document.getElementById("acorde-inical").value)
     let maiorSalto      = parseInt(document.getElementById("maior-salto").value)    
-    let menorSalto      = parseInt(document.getElementById("menor-salvo").value)
+    let menorSalto      = parseInt(document.getElementById("menor-salvo").value)    
 
     play(minimo, maximo, acordeInicial, maiorSalto, menorSalto)
 }
@@ -146,8 +152,74 @@ function play(minimo, maximo, acordeInicial, maiorSalto, menorSalto){
     document.body.contadorCanal++
     criarCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
     criarHTMLCanal(minimo, maximo, acordeInicial, maiorSalto, menorSalto, document.body.contadorCanal)
+    
+    if(canais_status != "iniciando"){
+        canais.push({'m':minimo, 'a':maximo, 'c':acordeInicial, 'i':maiorSalto, 'e':menorSalto, 'id':document.body.contadorCanal})
+    }    
+
+    URLCanaisSaida()
 }
 
 function stopCanal(n_canal){
     clearInterval(p_canal[n_canal])
+    
+    canais = removeEleArrayByKey(canais, n_canal)
 }
+
+
+/* para compartilhar link com os canais - inicio */
+
+function removeEleArrayByKey(a, key){
+    for(let i=0; i<a.length; i++){
+        if(a[i]['id'] == key){
+            a.splice(i, 1);
+            return a
+        }
+    }
+    return a
+}
+
+function canaisToURL(){
+    let hash = ''
+    for(let i=0; i<canais.length; i++){
+        hash += 
+        '#'+
+        canais[i]['m']+','+
+        canais[i]['a']+','+
+        canais[i]['c']+','+
+        canais[i]['i']+','+
+        canais[i]['e']+','+
+        canais[i]['id']
+    }
+
+    return location.host || location.pathname + hash
+}
+
+function URLCanaisSaida(){
+    document.getElementById('saida-url-compartilhar').value = canaisToURL()
+}
+
+function initCheckURLCanais(){
+    console.log('initCheckURLCanais()')
+
+    canais = hash_to_array()
+
+    console.log(canais)
+    
+    canais_status = "iniciando"
+
+    for(let i=0; i<canais.length; i++){
+        console.log(i)
+        play(
+            parseInt(canais[i]['m']),
+            parseInt(canais[i]['a']), 
+            parseInt(canais[i]['c']), 
+            parseInt(canais[i]['i']), 
+            parseInt(canais[i]['e']) 
+        )
+    }
+
+    canais_status = "finalizado"
+}
+
+/* para compartilhar link com os canais - fim */
