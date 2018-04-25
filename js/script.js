@@ -192,7 +192,7 @@ function canaisToURL(){
         canais[i]['id']
     }
 
-    return location.host || location.pathname + hash
+    return (location.href || location.pathname) + hash
 }
 
 function URLCanaisSaida(){
